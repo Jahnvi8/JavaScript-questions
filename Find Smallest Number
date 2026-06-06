@@ -1,0 +1,14 @@
+https://namastedev.com/practice/find-smallest-number
+
+
+function findSmallest(arr) {
+  // your solution here
+  if (!Array.isArray(arr)) return false
+  if(arr.length===0) return null
+  if (!arr.every(x => typeof x === 'number' && Number.isFinite(x))) return false
+    
+   return arr.reduce((acc, curr) => 
+      curr<acc?curr:acc, arr[0])
+  }
+
+module.exports = { findSmallest };
